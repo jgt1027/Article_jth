@@ -6,7 +6,7 @@
 <title>글 쓰기</title>
 </head>
 <body>
-	<form action="./app/register/write" method="post">
+	<form action="./app/register/writ" method="post">
 		<p>
 			학번 : 2014041064
 		</p>

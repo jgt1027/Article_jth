@@ -28,13 +28,18 @@ public class RegisterController {
 	}
 
 	@PostMapping("/register/write")
-	public String add(Article article) {
+	public void add(Article article) {
+		}
+	
+	@PostMapping("/register/writ")
+	public String finsh(Article article) {
 		articleDao.insert(article);
-		logger.info("post write");
-		return "list";
-	}
-
-
+		logger.info("post write ");
+		return "/register/writ";
+		}
+	
+	
+	
 	@RequestMapping(value="/register/read", method=RequestMethod.GET)
 	public String read(@RequestParam int articleId,Model model) {
 		Article read = articleDao.getArticle(articleId);
